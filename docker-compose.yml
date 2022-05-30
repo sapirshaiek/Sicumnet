@@ -1,0 +1,65 @@
+version: "3.2"
+services:
+
+  db:
+    restart: unless-stopped
+    image: mariadb:5.5
+    container_name: db
+    environment:
+      - MYSQL_HOST=localhost
+      - MYSQL_PORT=3306
+      - MYSQL_ROOT_HOST=%
+      - MYSQL_DATABASE=sn_db
+      - MYSQL_USER=sn_db_user
+      - MYSQL_PASSWORD=mysecretpass
+      - MYSQL_ROOT_PASSWORD=mysecretpass
+      - LANG=C.UTF-8
+    command: ['mysqld', '--character-set-server=utf8', '--collation-server=utf8_unicode_ci']
+    ports:
+      - "3302:3306"
+    networks:
+      - db-net
+
+  service:
+    restart: unless-stopped
+    container_name: service
+    environment:
+      - DJANGO_SUPERUSER_USERNAME=admin
+      - DJANGO_SUPERUSER_PASSWORD=admin
+    
+    command : bash -c "python ./src/check_db.py --service-name db --ip db --port 3306 && 
+                      python ./src/manage.py makemigrations users &&
+                      python ./src/manage.py makemigrations sn &&
+                      python ./src/manage.py migrate &&
+                      python ./src/db_init.py --ip db --port 3306 --user sn_db_user --dbname sn_db --dbpass mysecretpass --admin_name Admin --admin_email admin@admin.com --admin_user_name admin &&
+                      python ./src/manage.py runserver 0.0.0.0:5000"
+    build:
+      context: ./service/
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    depends_on:
+      - db
+    networks:
+      - db-net
+
+  frontend:
+    restart: unless-stopped
+    command : npm start
+    container_name: frontend
+    environment:
+      - DISABLE_ESLINT_PLUGIN=true
+    build:
+      context: ./frontend/gui/
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    stdin_open: true
+    depends_on:
+      - service
+    networks:
+      - db-net
+
+networks:
+  db-net:
+    driver: bridge

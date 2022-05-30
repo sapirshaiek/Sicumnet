@@ -1,0 +1,43 @@
+.title_inner{
+    margin: 5% auto;
+    font-size: 4.5vw;
+    width: 100%;
+    text-align: center;
+    color: #ab261d;
+    font-weight: 500;
+    
+}
+
+.button_course{
+    
+    border: none;
+    cursor: pointer;
+    color: white;
+    
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 2.0vw;
+    justify-content: center;
+    width: 100%;
+}
+
+.button_course a:hover{
+    text-decoration: none;
+    color: white;
+}
+
+.course_zone{
+    display: flex;
+    flex-wrap: wrap;
+    width: 85%;
+    margin: 4% auto;
+}
+
+.item{
+    width: 45%;
+    background-color: rgb(54, 54, 54);
+    margin: 0 auto 24px auto;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 12px;
+}

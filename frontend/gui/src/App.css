@@ -1,0 +1,175 @@
+/*
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+*/
+
+.clear{
+  text-decoration: none;
+  color: white;
+}
+
+.clear:hover{
+  text-decoration: none;
+  color: white;
+}
+
+.menu_screen{
+  text-decoration: none;
+  display: flex;
+  max-width: 68%;
+  justify-content: center;
+  text-align: center;
+  margin: 4% auto 0 auto;
+}
+
+.circle_menu{
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 10% auto 0 auto;
+  flex-direction: row-reverse;
+}
+
+.card_block {
+  text-decoration: none;
+  color: white;
+  margin: 0 auto;
+  width: 34%;
+  font-size: 1.5vw;
+
+  padding: 1.2vw;
+}
+
+.card_block:hover{
+  text-decoration: none;
+  color: white
+}
+
+.round_button{
+  width: 13.5vw;
+  height: 13.5vw;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 50%;
+  font-size: 1.5vw;
+  padding: 2%;
+}
+
+.nav_button{
+  width: 7.0vw;
+  height: 6.0vw;
+}
+
+.round_button_white{
+  width: 7.0vw;
+  height: 7.0vw;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 50%;
+  font-size: 1.5vw;
+  padding: 2%;
+  background-color: white;
+  color:#6a1a15;
+  text-decoration: none;
+
+}
+
+.round_button:hover{
+  background-color: #6a1a15;
+}
+
+
+.red{
+  background-color: #ab261d;
+  color: white;
+}
+
+.bottom_video_links{
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 10% auto 0 auto;
+  flex-direction: row-reverse;
+
+}
+
+
+.bottom_video_link{
+  text-align: center;
+  background-color: rgb(54, 54, 54);
+  text-decoration: none;
+  color: white;
+  font-size: 2.0vw;
+  float: left;
+  padding:20px;
+  width: 40%;
+  height: 10%;
+  margin: 4%;
+}
+
+.bottom_video_link:hover{
+  text-decoration: none;
+  color: white;
+}
+
+.video_icon{
+  margin-top: 10px;
+  vertical-align: middle;
+}
+
+.vid_logo{
+  height: 50px;
+}
+
+.card_logo{
+  width: 80%;
+  margin-bottom: 40px;
+}
+
+.card_text{
+  font-size: xx-large;
+}

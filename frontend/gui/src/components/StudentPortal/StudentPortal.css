@@ -1,0 +1,24 @@
+.bottom_links{
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 10% auto 0 auto;
+    flex-direction: row-reverse;
+
+}
+
+
+.bottom_link{
+    text-align: center;
+    background-color: rgb(54, 54, 54);
+    color: white;
+    font-size: 2.0vw;
+    float: left;
+    padding:40px;
+    width: 40%;
+    margin: 4%;}
+
+.fac_logo{
+    width: 50%;
+}

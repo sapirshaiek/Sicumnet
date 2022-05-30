@@ -1,0 +1,66 @@
+.link_table{
+    width: 60%;
+    margin: 0 auto 0 auto;
+    font-size: 25pt;         
+}
+
+.rows{
+    border-top:  5px;
+    border-top-color: rgba(132, 132, 132, 0.587);
+    border-style: solid;
+}
+
+
+.headers > th{
+    text-align: center;
+}
+
+.rows > td{
+    text-align: center;
+}
+
+.td_right{
+    text-align: right;
+}
+.td_right_h{
+    text-align: right;
+    margin-right: 50px;
+}
+
+.two_wide{
+    padding: 10px;   
+}
+
+.link_box{
+    text-align: right;
+    width: 50%;
+    float: left;
+    padding: 10px;
+}
+
+.vote_box{
+    outline: 0;
+    border: 0;
+    background-color: transparent;
+    width: 50%;
+    float: left;
+    padding: 10px;
+}
+
+.trash{
+    outline: 0;
+    border: 0;
+    background-color: transparent;
+}
+
+.check{
+    outline: 0;
+    border: 0;
+    background-color: transparent;
+    color: green;
+}
+
+.facility_names{
+    font-size: medium;
+    font-weight: bold;
+}
